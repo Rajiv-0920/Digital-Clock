@@ -1,0 +1,90 @@
+:root {
+    --black: #0d111d;
+    --white: #FF5403;
+    --active: #FF5403;
+    --disabled: #292D36;
+    --clock-gray: rgba(158, 158, 158, 10%);
+    --digital: 'Digital Mono', Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: 'Digital Mono';
+    src: url("./fonts/digital.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--black);
+    font-family: var(--digital);
+    color: var(--white);
+    display: grid;
+    place-items: center;
+}
+
+.clock {
+    background-color: var(--black);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: min(6vw, 30px);
+    width: calc(100vw - 20px);
+    margin-inline: auto;
+    padding: min(4vw, 50px) min(4vw, 75px);
+    border-radius: max(1vw, 17px);
+    user-select: none;
+}
+
+@media (min-width: 50em) {
+    .clock {
+        width: 778px;
+        box-shadow: -25px -25px 100px 0px rgba(0, 0, 0, 0.4);
+
+    }
+
+    body {
+        background: rgb(131, 153, 162);
+        background: linear-gradient(146deg, rgba(131, 153, 162, 1) 0%, rgba(238, 242, 243, 1) 100%);
+    }
+}
+
+.time, .time-background {
+    font-size: clamp(3rem, 20vw, 10rem);
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.7;
+}
+
+.time-background {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    color: var(--clock-gray);
+}
+
+.time {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.week {
+    display: flex;
+    grid-row: 2/ 3;
+    grid-column: 2 / 3;
+    justify-content: space-between;
+    color: var(--disabled);
+    font-size: min(4vw, 1.5rem);
+}
+
+.am-pm {
+    color: var(--disabled);
+    font-size: min(4vw, 1.3rem);
+}
+
+.active {
+    color: var(--active);
+}
