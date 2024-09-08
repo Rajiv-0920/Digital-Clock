@@ -32,7 +32,7 @@ Here's a glimpse of the digital clock in action:
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/Rajiv-0920/Digital-Clock.git)
-- Live Site URL: [Live site URL](https://rajiv-0920.github.io/Degital-Clock/)
+- Live Site URL: [Live site URL](https://rajiv-0920.github.io/Digital-Clock/)
 
 ## My process
 
